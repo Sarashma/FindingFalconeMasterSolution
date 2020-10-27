@@ -1,0 +1,41 @@
+<div class="container">
+
+  <h4>Select planets you want to search in:</h4>
+  <br />
+
+  <div class="row title">
+    <div class="col col-3 ">
+      <div class="font-weight-bold text-center">Destination 1</div>
+      <journey-selector [destinationNumber]="1" [planets]="availablePlanets" [vehicles]="vehicles"
+        (selectedDestination)='selectedDestination($event)'>
+      </journey-selector>
+    </div>
+    <div class="col col-3">
+      <div class="font-weight-bold text-center">Destination 2</div>
+      <journey-selector [destinationNumber]="2" [planets]="availablePlanets" [vehicles]="vehicles"
+        (selectedDestination)='selectedDestination($event)'>
+      </journey-selector>
+    </div>
+    <div class="col col-3 ">
+      <div class="font-weight-bold text-center">Destination 3</div>
+      <journey-selector [destinationNumber]="3" [planets]="availablePlanets" [vehicles]="vehicles"
+        (selectedDestination)='selectedDestination($event)'>
+      </journey-selector>
+    </div>
+    <div class="col col-3 ">
+      <div class="font-weight-bold text-center">Destination 4</div>
+      <journey-selector [destinationNumber]="4" [planets]="availablePlanets" [vehicles]="vehicles"
+        (selectedDestination)='selectedDestination($event)'>
+      </journey-selector>
+    </div>
+  </div>
+
+  <br />
+  <h6>Time taken : {{timeTaken}}</h6>
+
+  <br />
+  <div class="text-center" *ngIf="selectedDestinations.length > 3">
+    <button type="button" class="btn btn-primary" (click)="find()">Find Falcone</button>
+  </div>
+
+</div>
